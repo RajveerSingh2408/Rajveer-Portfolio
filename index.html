@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* Basic webpage styling */
+
+        body {
+            margin: 0;
+            background-color: #A9A9A9;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* Main layout */
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+
+        /* Left sidebar */
+
+        .sidebar {
+            width: 260px;
+            background-color: #14213D;
+            color: #fca311;
+            text-align: center;
+            padding: 30px 20px;
+            box-sizing: border-box;
+        }
+
+
+        /* Profile image */
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+
+        /* Name */
+
+        .profile-name {
+            color: #fca311;
+        }
+
+
+        /* Navigation links */
+
+        .nav-link {
+            display: block;
+            color: #fca311;
+            text-decoration: none;
+            padding: 12px;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+
+        /* Navigation hover effect */
+
+        .nav-link:hover {
+            color: white;
+            text-shadow: 0 0 10px #e41414;
+        }
+
+
+        /* Right side content */
+
+        .content {
+            flex: 1;
+            padding: 50px;
+        }
+
+
+        /* Hide all sections by default */
+
+        .content-section {
+            display: none;
+        }
+
+
+        /* Show selected section */
+
+        .content-section.active {
+            display: block;
+        }
+
+
+       
+
+.skill-name {
+    margin-left: 40px;
+    margin-bottom: 5px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+}
+
+.skill-bar {
+    width: calc(100% - 80px);
+    height: 12px;
+
+    margin-left: 40px;
+    margin-bottom: 18px;
+
+    background-color: #d0d0d0;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.skill {
+    height: 100%;
+
+    background-color: #14213D;
+    color: #fca311;
+
+    text-align: right;
+    padding-right: 8px;
+
+    box-sizing: border-box;
+
+    font-size: 10px;
+    line-height: 12px;
+
+    border-radius: 10px;
+}
+
+/* Skill levels */
+
+.html {
+    width: 50%;
+}
+/* ================= CONTACT FORM ================= */
+
+.contact-form-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background-color: #E5E4E2;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Form groups */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* Labels */
+
+.form-group label {
+    display: block;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #14213D;
+
+    margin-bottom: 8px;
+}
+
+.form-group label i {
+    color: #fca311;
+    margin-right: 6px;
+}
+
+
+/* Input + Textarea */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
+    color: #333333;
+    background-color: #ffffff;
+
+    border: 1px solid #999999;
+    border-radius: 6px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* Message box */
+
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+
+/* Input focus */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #14213D;
+
+    box-shadow: 0 0 6px rgba(20, 33, 61, 0.3);
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888888;
+}
+
+
+/* Submit button */
+
+.submit-btn {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 13px;
+
+    background-color: #14213D;
+    color: #fca311;
+
+    border: none;
+    border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Button hover */
+
+.submit-btn:hover {
+    background-color: #fca311;
+    color: #14213D;
+
+    box-shadow: 0 0 10px rgba(252, 163, 17, 0.5);
+
+    transform: translateY(-2px);
+}
+
+
+/* Button icon */
+
+.submit-btn i {
+    margin-right: 7px;
+}
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+
+        <!-- ================= LEFT SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- Profile photograph -->
+
+            <img src="https://iili.io/CQSkSRe.md.jpg" alt="Rajveer Singh" border="0"
+
+                 alt="Rajveer Singh"
+
+                 width="150"
+
+                 height="150"
+                 class="profile-img">
+
+
+            <!-- Name -->
+
+            <h2 class="profile-name">
+                Rajveer Singh
+            </h2>
+
+
+            <!-- Navigation -->
+
+            <nav>
+
+
+                <a href="#" class="nav-link"
+                   onclick="showSection('about')">
+                    About
+                </a>
+
+
+                <a href="#" class="nav-link"
+                   onclick="showSection('education')">
+                    Education
+                </a>
+
+
+                <a href="#" class="nav-link"
+                   onclick="showSection('achievements')">
+                    Achievements
+                </a>
+
+
+                <a href="#" class="nav-link"
+                   onclick="showSection('certificates')">
+                    Certificates
+                </a>
+
+
+                <a href="#" class="nav-link"
+                   onclick="showSection('skills')">
+                    Skills
+                </a>
+
+
+                <a href="#" class="nav-link"
+                   onclick="showSection('contact')">
+                    Contact
+                </a>
+
+
+            </nav>
+
+
+        </aside>
+
+
+        <!-- ================= RIGHT CONTENT ================= -->
+
+        <main class="content">
+
+
+            <!-- ================= ABOUT ================= -->
+
+            <section id="about"
+                     class="content-section active">
+
+
+                <h1>
+                    Hi, I'm Rajveer Singh 
+                </h1>
+
+
+                <h2>
+                    About Me
+                </h2>
+
+
+                <p>
+                    I am Rajveer Singh, a fresher at MITAOE Pune,
+                    pursuing Electronics With Computer Enginnering.
+                </p>
+
+
+                <p>
+                    My interests lie in Vibe Coding, AIML,
+                    and Gaming.
+                </p>
+
+
+                <p>
+                    Beyond academics, I am passionate about
+                    classical music, holding a Senior Diploma
+                    (4th year) in Instrumental Music in Tabla.
+                </p>
+
+
+                <p>
+                    In addition to my technical and artistic
+                    pursuits, I have actively participated in
+                    the National Cadet Corps (NCC).
+                </p>
+
+
+                <!-- Personal information -->
+
+
+                <p>
+                    <i class="fa-solid fa-cake-candles info-icon"></i>
+                    Birthday: 24/03/2008
+                </p>
+
+
+                <p>
+                    <i class="fa-solid fa-location-dot info-icon"></i>
+                    Location: Pune, Maharashtra, India
+                </p>
+
+
+                <p>
+                    <i class="fa-solid fa-language info-icon"></i>
+                    Languages: English, Hindi, Punjabi
+                </p>
+
+
+            </section>
+
+
+            <!-- ================= EDUCATION ================= -->
+
+            <section id="education"
+                     class="content-section">
+
+
+                <h1>
+                    Education
+                </h1>
+
+
+                <h2>
+                    1.MITAOE Pune, India
+
+
+                </h2>
+
+<p>
+                    Degree: B.Tech in Electronics and Computer  Engineering
+                </p>
+                <p>
+                </p>
+                <p>Duration: 2026 - 2030</p>
+<hr>
+
+                <h2>
+                    2.MIT VGS, Kothrud, Pune
+
+
+
+                </h2>
+                <p>
+                </p>
+                <p>
+                    Stream: Stream: Physics,Chemistry and Maths</p>
+                 <p>
+                    <p>Higher Secondary Education
+</p>
+                    Board: Central Board of Secondary Education (CBSE)
+                </p>
+                <p>Overall Percentage: 67%</p>
+                <p>Duration: 2024 - 2026</p>
+<hr>
+
+                <h2>
+                    3..Delhi Public School, Greater Noida
+                </h2>
+                <p>
+                 Secondary Education
+
+                </p>
+                <p>
+                    Board: Central Board of Secondary Education (CBSE)
+                </p>
+                <p>Overall Percentage: 79%
+
+              </p>
+                <p>Duration: 2022 - 2024</p>
+            </section>
+
+
+            <!-- ================= ACHIEVEMENTS ================= -->
+
+            <section id="achievements"
+                     class="content-section">
+
+
+                <h1>
+                    Achievements
+                </h1>
+
+
+                <p>
+                    1. Participated in the National Cadet Corps (NCC) and completed the 1st year, recently appeared for the 'A' certificate exam.
+
+
+                </p>
+                <p>2. Achieved a Senior Diploma (4th year) in Instrumental Music in Tabla, showcasing dedication and proficiency in classical music.
+
+                </p>
+                <p>3. Secured 3rd place in the Nationals Inter DPS Classical Music Competition.
+
+                   </p>
+
+
+            </section>
+
+
+            <!-- ================= CERTIFICATES ================= -->
+
+            <section id="certificates"
+                     class="content-section">
+
+
+                <h1>
+                    Certificates
+                </h1>
+
+
+                <p>
+                    Your certificates will be added here.
+                </p>
+
+
+            </section>
+
+
+            <!-- ================= SKILLS ================= -->
+
+            <section id="skills"
+                     class="content-section">
+
+
+                <h1>
+                    Skills
+                </h1>
+
+
+                <p>
+                    <p class="skill-name">HTML</p>
+                     <div class="skill-bar">
+                  <div class="skill html">50%</div>
+                   </div>
+                </p>
+
+
+            </section>
+
+
+            <!-- ================= CONTACT ================= -->
+
+            <section id="contact"
+                     class="content-section">
+
+
+                <h1>
+                    Contact
+                </h1>
+
+
+                <p>
+                   <div class="contact-form-container">
+        <form action="https://formspree.io/f/mppabdjz" method="POST">
+            <!-- Hidden input to disable CAPTCHA -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-group">
+                <label for="name">
+                    <i class="fas fa-user"></i> Your Name
+                </label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Enter your name" 
+                    required
+                >
+            </div>
+
+            <div class="form-group" style="margin-top: 1.5rem;">
+                <label for="email">
+                    <i class="fas fa-envelope"></i> Your Email
+                </label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="your.email@example.com" 
+                    required
+                >
+            </div>
+
+            <div class="form-group" style="margin-top: 1.5rem;">
+                <label for="message">
+                    <i class="fas fa-comment-alt"></i> Your Message
+                </label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    placeholder="Hello Rajveer, I'd like to connect about..." 
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+        </form>
+    </div>
+</section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation functionality
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            const sections = document.querySelectorAll('.section');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links and sections
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Show corresponding section
+                    const sectionId = this.getAttribute('href');
+                    document.querySelector(sectionId).classList.add('active');
+                    
+                    // Close mobile menu if open
+                    if (document.body.classList.contains('menu-open')) {
+                        document.body.classList.remove('menu-open');
+                    }
+                });
+            });
+            
+            // Mobile menu toggle (for smaller screens)
+            const menuToggle = document.createElement('div');
+            menuToggle.className = 'menu-toggle';
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            document.body.appendChild(menuToggle);
+            
+            menuToggle.addEventListener('click', function() {
+                document.body.classList.toggle('menu-open');
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+                </p>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function showSection(sectionId) {
+
+            /* Select all portfolio sections */
+
+            const sections =
+                document.querySelectorAll(".content-section");
+
+
+            /* Hide every section */
+
+            sections.forEach(section => {
+
+                section.classList.remove("active");
+
+            });
+
+
+            /* Show the section that was clicked */
+
+            document
+                .getElementById(sectionId)
+                .classList.add("active");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
